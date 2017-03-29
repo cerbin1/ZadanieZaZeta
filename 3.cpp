@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include "math.h"
 
@@ -22,4 +23,4 @@ int main() {
     cout << "TAK";
 
     return 0;
-}
+}*/
