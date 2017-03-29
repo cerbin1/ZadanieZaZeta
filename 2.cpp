@@ -1,9 +1,8 @@
-/*
 #include <iostream>
 
 using namespace std;
 
-int main() {
+int main2() {
     int iloscLiczb;
     cout << "Podaj liczbe z przedzialu <0;50 000>" << endl;
     cin >> iloscLiczb;
@@ -39,4 +38,3 @@ int main() {
 
     return 0;
 }
-*/

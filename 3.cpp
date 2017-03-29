@@ -1,10 +1,9 @@
-/*
 #include <iostream>
 #include "math.h"
 
 using namespace std;
 
-int main() {
+int main3() {
     unsigned long long liczba;
     cin >> liczba;
 
@@ -23,4 +22,4 @@ int main() {
     cout << "TAK";
 
     return 0;
-}*/
+}
