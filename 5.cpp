@@ -8,7 +8,7 @@ int main5() {
     cin >> liczba;
 
     if (liczba < 1 || liczba > 1000) {
-        cout << "Niepoprawna liczba. Przedzial <0; 1000>";
+        cout << "Nie podales liczby z przedzialu <0; 1000>";
         return 1;
     }
 
