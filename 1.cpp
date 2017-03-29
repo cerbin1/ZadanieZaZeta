@@ -12,7 +12,9 @@ int main() {
         return 1;
     }
 
-    int pomocnicza, wierszOdKonca, iloscZnakowX;
+    int wiersz, wierszOdKonca = n - 1, iloscZnakowX;
+
+    int poczatkowaIloscZnakow, poczatkowaWartoscWiersza;
 
     char amulet[n][n];
     for (int i = 0; i < n; ++i) {
@@ -21,64 +23,42 @@ int main() {
         }
     }
 
-//    if (n % 2 != 0) {
-        iloscZnakowX = 1;
-        pomocnicza = n / 2;
-        for (int k = 0; k < n / 2; ++k) {
-            for (int i = pomocnicza; i < iloscZnakowX + pomocnicza; ++i) {
-                amulet[k][i] = 'X';
-            }
-            iloscZnakowX += 2;
-            pomocnicza--;
-        }
-
-        for (int l = 0; l < n; ++l) {
-            amulet[n / 2][l] = 'X';
-        }
-        pomocnicza = n / 2;
-        iloscZnakowX = 1;
-        wierszOdKonca = n - 1;
-
-        for (int k = n / 2; k > 0; --k) {
-            for (int i = pomocnicza; i < iloscZnakowX + pomocnicza; ++i) {
-                amulet[wierszOdKonca][i] = 'X';
-            }
-            iloscZnakowX += 2;
-            pomocnicza--;
-            wierszOdKonca--;
-        }
-//    } else {
-        iloscZnakowX = 2;
-        pomocnicza = n / 2 - 1;
-        for (int k = 0; k < n / 2; ++k) {
-            for (int i = pomocnicza; i < iloscZnakowX + pomocnicza; ++i) {
-                amulet[k][i] = 'X';
-            }
-            iloscZnakowX += 2;
-            pomocnicza--;
-        }
-
+    if (n % 2 == 0) {
+        poczatkowaIloscZnakow = 2;
+        poczatkowaWartoscWiersza = n / 2 - 1;
         for (int l = 0; l < n; ++l) {
             for (int i = 0; i < 2; ++i) {
                 amulet[(n / 2) - i][l] = 'X';
-
             }
         }
-        iloscZnakowX = n % 2 == 0 ? 1 : 2;
-
-        iloscZnakowX = 2;
-        pomocnicza = n / 2 - 1;
-        wierszOdKonca = n - 1;
-
-        for (int k = n / 2; k > 0; --k) {
-            for (int i = pomocnicza; i < iloscZnakowX + pomocnicza; ++i) {
-                amulet[wierszOdKonca][i] = 'X';
-            }
-            iloscZnakowX += 2;
-            pomocnicza--;
-            wierszOdKonca--;
+    } else {
+        poczatkowaIloscZnakow = 1;
+        poczatkowaWartoscWiersza = n / 2;
+        for (int l = 0; l < n; ++l) {
+            amulet[n / 2][l] = 'X';
         }
-//    }
+    }
+
+    iloscZnakowX = poczatkowaIloscZnakow;
+    wiersz = poczatkowaWartoscWiersza;
+    for (int k = 0; k < n / 2; ++k) {
+        for (int i = wiersz; i < iloscZnakowX + wiersz; ++i) {
+            amulet[k][i] = 'X';
+        }
+        iloscZnakowX += 2;
+        wiersz--;
+    }
+    iloscZnakowX = poczatkowaIloscZnakow;
+    wiersz = poczatkowaWartoscWiersza;
+
+    for (int k = n / 2; k > 0; --k) {
+        for (int i = wiersz; i < iloscZnakowX + wiersz; ++i) {
+            amulet[wierszOdKonca][i] = 'X';
+        }
+        iloscZnakowX += 2;
+        wiersz--;
+        wierszOdKonca--;
+    }
 
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
