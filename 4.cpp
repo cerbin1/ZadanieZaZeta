@@ -1,9 +1,9 @@
 #include <iostream>
 #include "math.h"
 
-using namespace std; // 4
+using namespace std;
 
-int main() {
+int main4() {
     int iloscLiczb;
     cout << "Podaj liczbe z przedzialu <1; 1000>" << endl;
     cin >> iloscLiczb;
