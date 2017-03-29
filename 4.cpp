@@ -13,7 +13,7 @@ int main4() {
         return 1;
     }
 
-    int aktualna, najwieksza = (int) -(pow(10, 11));
+    long long int aktualna, najwieksza = (long long int) -(pow(10, 12));
 
     cout << "Podaj liczby z przedzialu <-10^9; 10^9>" << endl;
     for (int i = 0; i < iloscLiczb; ++i) {
@@ -25,7 +25,7 @@ int main4() {
         if (aktualna > najwieksza) {
             najwieksza = aktualna;
         }
-        cout << najwieksza;
+        cout << najwieksza << endl;
     }
 
     return 0;
