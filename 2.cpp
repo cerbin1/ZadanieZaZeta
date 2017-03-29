@@ -4,20 +4,21 @@ using namespace std;
 
 int main2() {
     int iloscLiczb;
-    cout << "Podaj liczbe z przedzialu <0;50 000>" << endl;
+    cout << "Podaj liczbe z przedzialu <0; 50 000>" << endl;
     cin >> iloscLiczb;
 
     if (iloscLiczb < 1 || iloscLiczb > 50000) {
-        cout << "Niepoprawna liczba";
+        cout << "Niepoprawna liczba. Przedzial <0; 50 000>";
+        cout << "Podaj liczbe z przedzialu <0; 50 000>" << endl;
         return 0;
     }
 
-    cout << "Podaj " << iloscLiczb << " liczb z przedzialu <0;20 000>" << endl;
+    cout << "Podaj " << iloscLiczb << " liczb z przedzialu <0; 20 000>" << endl;
     int liczby[iloscLiczb];
     for (int i = 0; i < iloscLiczb; ++i) {
         cin >> liczby[i];
         if (liczby[i] < 1 || liczby[i] > 20000) {
-            cout << "Niepoprawna liczba";
+            cout << "Niepoprawna liczba. Przedzial <0; 20 000>";
             return 0;
         }
     }
