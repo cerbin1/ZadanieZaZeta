@@ -11,7 +11,7 @@ int main3() {
 
     if (liczba < 0 || liczba > pow(10, 18)) {
         cout << "Niepoprawna liczba. Przedzial <0; 10^18>";
-        return 0;
+        return 1;
     }
 
     while (liczba) {

@@ -10,7 +10,7 @@ int main2() {
     if (iloscLiczb < 1 || iloscLiczb > 50000) {
         cout << "Niepoprawna liczba. Przedzial <0; 50 000>";
         cout << "Podaj liczbe z przedzialu <0; 50 000>" << endl;
-        return 0;
+        return 1;
     }
 
     cout << "Podaj " << iloscLiczb << " liczb z przedzialu <0; 20 000>" << endl;
@@ -19,7 +19,7 @@ int main2() {
         cin >> liczby[i];
         if (liczby[i] < 1 || liczby[i] > 20000) {
             cout << "Niepoprawna liczba. Przedzial <0; 20 000>";
-            return 0;
+            return 1;
         }
     }
 

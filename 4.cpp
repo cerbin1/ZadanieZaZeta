@@ -10,7 +10,7 @@ int main4() {
 
     if (iloscLiczb < 1 || iloscLiczb > 1000) {
         cout << "Niepoprawna liczba. Przedzial <0; 1000>";
-        return 0;
+        return 1;
     }
 
     int aktualna, najwieksza = (int) -(pow(10, 11));
@@ -20,7 +20,7 @@ int main4() {
         cin >> aktualna;
         if (aktualna < -pow(10, 9) || aktualna > pow(10, 9)) {
             cout << "Niepoprawna liczba. Przedzial <-10^9; 10^9>";
-            return 0;
+            return 1;
         }
         if (aktualna > najwieksza) {
             najwieksza = aktualna;

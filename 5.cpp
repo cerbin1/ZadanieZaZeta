@@ -2,14 +2,14 @@
 
 using namespace std;
 
-int main() {
+int main5() {
     int liczba;
     cout << "Podaj liczbe z przedzialu <0; 1000>" << endl;
     cin >> liczba;
 
     if (liczba < 1 || liczba > 1000) {
         cout << "Niepoprawna liczba. Przedzial <0; 1000>";
-        return 0;
+        return 1;
     }
 
     bool czyJestPierwsza;
