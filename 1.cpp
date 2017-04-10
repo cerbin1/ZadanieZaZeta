@@ -2,13 +2,11 @@
 
 using namespace std;
 
-int main1() {
+int main() {
     int n;
-    cout << "Podaj liczbe z przedzialu <3; 80>" << endl;
     cin >> n;
 
     if (n < 3 || n > 80) {
-        cout << "Nie podales liczby z przedzialu <3; 80>";
         return 1;
     }
 
@@ -66,4 +64,5 @@ int main1() {
         }
         cout << endl;
     }
+    return 0;
 }

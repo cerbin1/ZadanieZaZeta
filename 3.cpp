@@ -3,14 +3,11 @@
 
 using namespace std;
 
-int main3() {
+int main() {
     long long liczba;
-
-    cout << "Podaj liczbe z przedzialu <0; 10^18>" << endl;
     cin >> liczba;
 
     if (liczba < 0 || liczba > pow(10, 18)) {
-        cout << "Nie podales liczby z przedzialu <0; 10^18>";
         return 1;
     }
 

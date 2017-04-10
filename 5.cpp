@@ -2,13 +2,11 @@
 
 using namespace std;
 
-int main5() {
+int main() {
     int liczba;
-    cout << "Podaj liczbe z przedzialu <1; 1000>" << endl;
     cin >> liczba;
 
     if (liczba < 1 || liczba > 1000) {
-        cout << "Nie podales liczby z przedzialu <1; 1000>";
         return 1;
     }
 

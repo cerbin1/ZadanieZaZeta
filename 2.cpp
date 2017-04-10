@@ -2,28 +2,23 @@
 
 using namespace std;
 
-int main2() {
-    unsigned int iloscLiczb;
-    cout << "Podaj liczbe z przedzialu <0; 50 000>" << endl;
+int main() {
+    int iloscLiczb;
     cin >> iloscLiczb;
 
     if (iloscLiczb < 1 || iloscLiczb > 50000) {
-        cout << "Nie podales liczby z przedzialu <0; 50 000>";
         return 1;
     }
 
-    cout << "Podaj " << iloscLiczb << " liczb z przedzialu <0; 20 000>" << endl;
-    unsigned int liczby[iloscLiczb];
+    int liczby[iloscLiczb];
     for (int i = 0; i < iloscLiczb; ++i) {
         cin >> liczby[i];
         if (liczby[i] < 1 || liczby[i] > 20000) {
-            cout << "Nie podales liczby z przedzialu <0; 20 000>";
             return 1;
         }
     }
 
-    int ciagSum[iloscLiczb];
-
+    int  ciagSum[iloscLiczb];
     for (int i = 0; i < iloscLiczb; ++i) {
         int suma = 0;
         for (int j = 0; j <= i; ++j) {
